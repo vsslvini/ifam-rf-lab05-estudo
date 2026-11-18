@@ -1,0 +1,18 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# --- Ambiente virtual ---
+.venv/
+venv/
+env/
+
+# --- Configuracao local ---
+.env
+
+# --- Testes e cache ---
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/

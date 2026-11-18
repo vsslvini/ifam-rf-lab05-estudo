@@ -1,0 +1,50 @@
+# ==========================================================
+# Ambiente de desenvolvimento - Back-end IFAM
+#
+#   docker compose up -d postgres     # so o banco (API roda no .venv)
+#   docker compose up --build         # banco + API em container
+#
+# Nomes de servico, credenciais e banco alinhados com a branch da Equipe do
+# Core (feature/rf-02-v2), para que a integracao seja apenas acrescentar os
+# servicos de mensageria (rabbitmq / worker).
+# ==========================================================
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ifam
+      POSTGRES_USER: ifam
+      POSTGRES_PASSWORD: ifam
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ifam -d ifam"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build: .
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: postgresql+psycopg://ifam:ifam@postgres:5432/ifam
+      USE_IN_MEMORY_REPO: "false"
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/ping', timeout=5)"]
+      interval: 5s
+      timeout: 10s
+      retries: 20
+      start_period: 10s
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  postgres_data:

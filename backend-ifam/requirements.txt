@@ -1,0 +1,36 @@
+# ==========================================================
+# Back-end IFAM - API RESTful Multi-Modulos (FastAPI)
+# Python 3.10+
+# ==========================================================
+
+# --- API ---
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+python-multipart
+
+# --- Validacao / configuracao ---
+pydantic>=2.9.0
+pydantic-settings>=2.5.0
+python-dotenv
+
+# --- Banco de dados (PostgreSQL 15+) ---
+SQLAlchemy>=2.0.30
+# Driver usado pela DATABASE_URL (`postgresql+psycopg://`).
+psycopg[binary]>=3.2
+psycopg2-binary
+
+# --- Seguranca / JWT (RF-CORE01) ---
+python-jose[cryptography]
+passlib[bcrypt]
+bcrypt
+
+# --- Testes ---
+pytest>=8.3.0
+httpx>=0.27.0
+
+# --- Mensageria (RF-LAB05: disparo de notificacao pos-aprovacao) ---
+# Ainda nao usados: `app/services/notificacoes.py` apenas registra a intencao
+# de enfileirar. Descomentar quando a fila `fila_emails_transacionais`
+# (docs/seq_07_mapa_mensageria.md) entrar no ar.
+# celery>=5.4.0
+# fastapi-mail>=1.4.1

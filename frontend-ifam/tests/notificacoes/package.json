@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "scripts": { "test": "node run.cjs" },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-transform-react-jsx": "^7.0.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.0.0",
+    "react": "19.1.0",
+    "react-test-renderer": "19.1.0"
+  }
+}
