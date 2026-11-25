@@ -9,7 +9,7 @@ commit_base: feature/RF-LAB05 (etapa 4, 16/11/2026 — visual enxuto + busca)
 # RF-LAB05: o código explicado
 
 > [!info] Relação com o outro guia
-> O [[Projeto Desenvolvimento Mobile (Benevaldo)]] explica a **arquitetura** e as **perguntas da defesa**. Esta nota desce um nível: explica **o que cada pedaço do código faz e por que está escrito daquele jeito**. Leia com os arquivos abertos do lado.
+> O [[Projeto Desenvolvimento Mobile (Benevaldo)]] explica a **arquitetura** e as **perguntas da defesa**. Esta nota desce um nível: explica **o que cada pedaço do código faz e por que está escrito daquele jeito**. Leia com os arquivos abertos do lado. O mesmo para o back-end (FastAPI) está em [[RF-LAB05 backend (código explicado)]].
 
 > [!important] Versão desta nota
 > Em 15/11/2026 a tela foi **componentizada**: o arquivo único de 908 linhas virou uma tela de 123 linhas + um hook + oito componentes + três utilitários. Esta nota descreve a versão nova (branch `feature/RF-LAB05`, etapa 3). A versão antiga (commit `ed436e9` da `develop`) continua no histórico do Git; as decisões da mudança estão em `/docs/RF-LAB05_frontend_decisoes.md`, seção 7.

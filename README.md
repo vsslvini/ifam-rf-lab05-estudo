@@ -13,7 +13,8 @@ Esta pasta é um retrato de 17/11/2026 e não substitui aquela entrega.
 | Arquivo | Para quê |
 | :--- | :--- |
 | [`ROTEIRO_DEFESA.md`](ROTEIRO_DEFESA.md) | **Comece aqui.** Perguntas de fluxo e arquitetura no estilo do professor ("se eu apertar aqui, o que acontece? mostre no código"), com a fala, o caminho dos arquivos e a linha para abrir |
-| [`notas-obsidian/`](notas-obsidian/) | O guia de defesa (arquitetura e perguntas), a explicação arquivo a arquivo e o roteiro, como estão no Obsidian |
+| [`notas-obsidian/`](notas-obsidian/) | O guia de defesa (arquitetura e perguntas), a explicação arquivo a arquivo do front e do **back-end**, e o roteiro, como estão no Obsidian |
+| [`RF-LAB05 backend (código explicado)`](notas-obsidian/RF-LAB05%20backend%20(c%C3%B3digo%20explicado).md) | Tutorial do back-end (FastAPI): router, schemas, deps, RN04, repositórios, banco, testes, roteiro no Swagger e perguntas |
 | [`docs/`](docs/) | Registro de decisões do front e do back, registros de cada sessão e o protótipo da disciplina |
 | [`HISTORICO_COMMITS.md`](HISTORICO_COMMITS.md) | O `git log` dos dois repositórios oficiais |
 
